@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: repeat(40, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  position: relative;
 }
 .header > * {
   grid-row: 2;
@@ -12,9 +13,12 @@
   display: flex;
   align-items: center;
 }
-.header i:nth-of-type(1) {
+.header span:nth-of-type(1) {
   grid-column: 3;
+  grid-row: 2;
   color: white;
+  min-width: 24px;
+  cursor: pointer;
 }
 /* youtube logo */
 
@@ -24,6 +28,7 @@
   padding: 18px 14px 18px 16px;
   position: relative;
   grid-column: 5;
+  cursor: pointer;
 }
 
 /* searchbar */
@@ -33,6 +38,8 @@
 .input-container form {
   width: 360px;
   height: 40px;
+  display: flex;
+  border: none;
 }
 .input-container form input {
   width: 100%;
@@ -46,4 +53,22 @@
 }
 .input-container form input:focus {
   outline: none;
+}
+.input-container form button {
+  width: 64px;
+  background: rgb(49, 49, 49);
+  border: none;
+  cursor: pointer;
+}
+.input-container form button i {
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .input-container {
+    grid-column: 17;
+  }
+  .input-container form {
+    width: 572px;
+  }
 }
