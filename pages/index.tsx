@@ -19,10 +19,8 @@ const Home: NextPage = ({ allPostsData }: any) => {
           crossOrigin="anonymous"
         ></link>
       </Head>
-
-      <main>
-        <Header />
-      </main>
+      <Header />
+      <main></main>
     </div>
   );
 };
